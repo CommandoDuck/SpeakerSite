@@ -3,6 +3,7 @@
 <head>
     <title>Speaker Site</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -15,6 +16,8 @@
         <li>My Topics</li>
     </ul>
 </div>
+
+
 
 <div class="contentWrapper">
 
@@ -36,9 +39,16 @@
     <h2>Welcome</h2>
     <p>Sign up to talk about things</p>
 
+    <div class="formValid">
+        <h4>Your form has been submitted.</h4>
+    </div>
 
     <div class="tSubmit"><span class="topicSubmit">Submit your topic</span></div>
 </div>
+
+
+
+
 
 <footer>
     <div class="copy">Dev Workshop LLC &copy; 2016</div>
@@ -46,19 +56,41 @@
 
 </div>
 
-<!--<div class="guide">
-    <span class="reply">
-        <span >Reply</span>
-        <span class="replyText">Click here to view menu</span>
+
+
+<div class="guide">
+    <div class="form">
+        <i class="exit fa fa-times"></i>
+        <form id="form">
+            First name:<br>
+            <input type="text" name="firstName" required><br>
+            Last name:<br>
+            <input type="text" name="lastName" required><br>
+            Email address:<br>
+            <input type="email" name="emeailAddress" required><br>
+            Phone number:<br>
+            <input type="text" name="phoneNumber" required><br>
+            Speech topic:<br>
+            <input type="text" name="topic" required><br>
+            Speech description:<br>
+            <input type="text" name="description" height="500" required><br><br>
+            <input type="submit">
+
+        </form>
+    </div>
+    <!--<span class="reply">
+    <span >Reply</span>
+    <span class="replyText">Click here to view menu</span>
     </span>
     <span class="guideLogin">
         <span>Forward</span>
         <span class="replyText">Click here to view menu</span>
-    </span>
-</div>-->
+    </span>-->
+</div>
+
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="app/app.js"></script>>
+<script src="app/app.js"></script>
 
 
 </body>

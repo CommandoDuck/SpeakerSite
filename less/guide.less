@@ -1,13 +1,34 @@
 .guide{
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: fade(black, 70%);
   z-index: 99;
+  display: none;
+
+  .form {
+    position: fixed;
+    height: 600px;
+    width: 720px;
+    left: 0;
+    right: 0;
+    top: 10%;
+    margin: 0 auto;
+    background-color: #efefef;
+    border-radius: 20px;
+
+    .exit {
+      cursor: pointer;
+      position: relative;
+      font-size: 48px;
+      left: 90%;
+      top: 3%;
+    }
+  }
 
   .reply {
     position: absolute;
@@ -19,5 +40,37 @@
     position: absolute;
     right: 40px;
     top: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .guide {
+    .form {
+      width: 450px;
+      height: 570px;
+
+      .exit {
+        font-size: 36px;
+        left: 87%;
+        top: 3%;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .guide {
+    .form {
+      width: 300px;
+      height: 360px;
+
+      .exit {
+        font-size: 36px;
+        left: 87%;
+        top: 3%;
+      }
+
+    }
   }
 }

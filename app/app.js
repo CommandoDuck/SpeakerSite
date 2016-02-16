@@ -25,8 +25,27 @@ function setBindings() {
         }
     });
 
-    $(".guide").click(function(e){
+    /*$(".guide").click(function(e){
         $(".guide").css("display", "none");
+    });*/
+
+    $(".exit").click(function(e) {
+        $(".guide").css("display", "none");
+    });
+
+    $(".tSubmit").click(function(){
+        $(".guide").css("display", "block");
+    });
+
+    $("#form").submit(function(){
+        console.log("yes");
+        $(".guide").css("display", "none");
+        $(".formValid").css("display", "block");
+
+        $(".formValid").fadeOut(2000, function() {
+
+        });
+        return false;
     })
 }
 
