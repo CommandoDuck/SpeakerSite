@@ -1,0 +1,22 @@
+.btn(@bCr: @bColor, @bCrH: @bColorHover ){
+  .btn {
+    //color: @bCr;
+  }
+  .btn :hover {
+    color: @bCrH;
+    cursor: pointer;
+  }
+}
+
+.callToActionButton() {
+  color: #ffffff;
+  background-color: @callToActionBG;
+  padding: 20px 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: lighten(@callToActionBG, 20%);
+  }
+}

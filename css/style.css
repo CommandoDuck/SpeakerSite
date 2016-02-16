@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.428;
+  height: 100%;
+  color: #898989;
+}
+body {
+  height: 100%;
+  background-color: #efefef;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 24px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 600;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 36px;
+}
+h6 {
+  font-size: 36px;
+}
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background-color: #efefef;
+}
+.menu {
+  width: 20%;
+  position: absolute;
+  min-height: 100%;
+  z-index: 0;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  padding: 30px 0 30px 10px;
+}
+.menu ul li:hover {
+  background-color: #CCCCCC;
+}
+.guide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+.guide .reply {
+  position: absolute;
+  top: 40px;
+  left: 110px;
+}
+.guide .guideLogin {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+header {
+  display: flex;
+  height: 100px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+header .btn :hover {
+  color: #FF383F;
+}
+header .logo {
+  height: 80%;
+}
+header .logo img {
+  height: 100%;
+}
+header .SignIn .btn :hover {
+  color: #ff383f;
+  cursor: pointer;
+}
+header .SignIn :hover {
+  color: #FF383F;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  header {
+    height: 200px;
+    padding-top: 5px;
+    box-sizing: content-box;
+    flex-direction: column;
+  }
+  header .logo {
+    height: 50%;
+    margin: auto;
+    align-self: flex-start;
+  }
+  header .SignIn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 100%;
+  }
+  header .btn {
+    cursor: pointer;
+  }
+  header .divider {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    height: 160px;
+    padding-bottom: 15px;
+  }
+  .logo {
+    height: 60%;
+  }
+  h2 {
+    text-align: center;
+  }
+  .SignIn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 100%;
+  }
+}
+.content {
+  margin-bottom: auto;
+  padding: 20px;
+  position: relative;
+}
+.content .topicSubmit {
+  color: #ffffff;
+  background-color: darkblue;
+  padding: 20px 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.content .topicSubmit:hover {
+  background-color: #0000f1;
+}
+.content .tSubmit {
+  padding-top: 20px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+footer .copy {
+  align-self: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,97 @@
+header {
+  display: flex;
+  height: 100px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+
+
+  .btn :hover {
+    color: #FF383F;
+  }
+
+  .logo {
+    height: 80%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .SignIn {
+    .btn();
+  }
+
+  .SignIn :hover {
+    color: #FF383F;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 200px;
+    padding-top: 5px;
+    box-sizing: content-box;
+
+    //justify-content: flex-start;
+    flex-direction: column;
+    .logo {
+      height: 50%;
+      margin: auto;
+      align-self: flex-start;
+    }
+
+    h2 {
+      //align-self: flex-end;
+    }
+
+    .SignIn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      //align-self: flex-end;
+      font-size: 100%;
+    }
+
+    .btn {
+      cursor: pointer;
+    }
+
+    .logIn {
+
+    }
+
+    .divider {
+      margin: 0 10px;
+    }
+
+    .signUp {
+
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    height: 160px;
+    padding-bottom: 15px;
+  }
+  .logo {
+    height: 60%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .SignIn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    //align-self: flex-end;
+    font-size: 100%;
+  }
+
+}
