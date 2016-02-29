@@ -71,7 +71,7 @@ function setBindings() {
 
         if(isEmailValid != true)
         {
-            $(".signUpModal").css("display", "none");
+            $(".signUp").css("display", "none");
             alert(isEmailValid);
         } else
         {
