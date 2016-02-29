@@ -86,7 +86,7 @@ h6 {
 .menu ul li:hover {
   background-color: #CCCCCC;
 }
-.signUpModal {
+.modal {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,9 +94,9 @@ h6 {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
-  display: flex;
+  display: none;
 }
-.signUpModal .signupForm {
+.modal .signupForm {
   position: relative;
   width: 70%;
   height: 60%;
@@ -109,25 +109,25 @@ h6 {
   box-sizing: border-box;
   padding: 20px;
 }
-.signUpModal .signupForm .exit {
+.modal .signupForm .exit {
   position: absolute;
   right: 20px;
   font-size: x-large;
   cursor: pointer;
 }
-.signUpModal .signupForm .exit :hover {
+.modal .signupForm .exit :hover {
   color: #FF383F;
 }
-.signUpModal form {
+.modal form {
   display: flex;
   flex-direction: column;
   text-align: start;
 }
-.signUpModal form label,
-.signUpModal form input {
+.modal form label,
+.modal form input {
   display: block;
 }
-.signUpModal form input {
+.modal form input {
   margin-bottom: 10px;
   height: 40px;
   font-size: 150%;
@@ -138,7 +138,7 @@ h6 {
   padding: 3px;
   box-sizing: border-box;
 }
-.signUpModal form .submit {
+.modal form .submit {
   width: 50%;
   background-color: #ffffff;
   margin-top: 20px;

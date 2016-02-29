@@ -32,7 +32,7 @@ function setBindings() {
     $(".exit").click(function(e) {
         var currentModal = this.parentElement.parentElement.className;
         console.log($(e));
-        $("." + currentModal).css("display", "none");
+        $(".modal").css("display", "none");
     });
 
     $(".tSubmit").click(function(){
@@ -82,8 +82,12 @@ function setBindings() {
     });
 
     $(".login").click(function(){
-        $(".signUpModal").css("display", "block")
+        $(".signUp").css("display", "block")
     });
+
+    $(".signUp").click(function(){
+        $(".signUpModal").css("dispaly", "block");
+    })
 
 }
 
