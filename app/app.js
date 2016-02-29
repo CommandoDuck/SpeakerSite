@@ -30,7 +30,9 @@ function setBindings() {
     });*/
 
     $(".exit").click(function(e) {
-        $(".guide").css("display", "none");
+        var currentModal = this.parentElement.parentElement.className;
+        console.log($(e));
+        $("." + currentModal).css("display", "none");
     });
 
     $(".tSubmit").click(function(){
@@ -46,7 +48,48 @@ function setBindings() {
 
         });
         return false;
-    })
+    });
+
+    $(".submit").click(function(e){
+        e.preventDefault();
+
+        var un = userName.value;
+        var ps = password.value;
+        var isEmailValid = validateEmail(un);
+
+        console.log(un);
+        console.log(ps);
+
+        if(ps != "" && un != "")
+        {
+
+        } else
+        {
+            alert("You must fill out both input boxes");
+        }
+
+
+        if(isEmailValid != true)
+        {
+            $(".signUpModal").css("display", "none");
+            alert(isEmailValid);
+        } else
+        {
+            //TODO need to make a deferred on the service
+            Service.checkService(un);
+            alert(isEmailValid);
+        }
+    });
+
+    $(".login").click(function(){
+        $(".signUpModal").css("display", "block")
+    });
+
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
 
 $(document).ready(function(){

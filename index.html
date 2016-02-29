@@ -29,7 +29,7 @@
     <h2>Dev Workshop Speaker Submission</h2>
 
     <div class="SignIn">
-        <span class="btn">Sign In </span>
+        <span class="btn login">Sign In </span>
         <span class="divider">|</span>
         <span class="btn"> Sign Up</span>
     </div>
@@ -47,6 +47,20 @@
     <div class="tSubmit"><span class="topicSubmit">Submit your topic</span></div>
 </div>
 
+    <div class="signUpModal">
+        <div class="signupForm">
+            <i class="exit fa fa-times"></i>
+            <h3>Login</h3>
+            <form>
+                <label>UserName</label>
+                <input id="userName" type="email">
+                <label>Password</label>
+                <input id="password" type="password">
+
+                <input class="submit" type="submit">
+            </form>
+        </div>
+    </div>
 
 
 
@@ -91,6 +105,7 @@
 
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="app/service.js"></script>
 <script src="app/app.js"></script>
 
 
