@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "u_id": 1,
+            "f_name": "guy",
+            "l_name": "dude",
+            "role": "admin",
+            "email": "123@yahoo.com",
+            "password": "password"
+        },
+        {
+            "u_id": 2,
+            "f_name": "john",
+            "l_name": "doe",
+            "email": "987@yahoo.com",
+            "password": "password"
+        }
+    ]
+}

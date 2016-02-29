@@ -1,0 +1,83 @@
+.signUpModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: fade(#000, 70%);
+  z-index: 99;
+  display: flex;
+
+    .signupForm {
+      position: relative;
+      width: 70%;
+      height: 60%;
+      min-height: 400px;
+      background-color: #efefef;
+      .roundCorners();
+      margin: auto;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 20px;
+
+      .exit {
+        position: absolute;
+        right: 20px;
+        font-size: x-large;
+        cursor: pointer;
+      }
+
+      .exit :hover {
+        color: #FF383F;
+      }
+    }
+
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    label, input {
+      display: block;
+    }
+
+    input {
+      margin-bottom: 10px;
+      height: 40px;
+      font-size: 150%;
+      .roundCorners(5px);
+      text-shadow: none;
+      border:1px solid #ccc;
+      padding: 3px;
+      box-sizing: border-box;
+    }
+
+    .submit {
+      width: 50%;
+      background-color: #ffffff;
+      margin-top: 20px;
+      align-self: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .signUpModal {
+    .signupForm {
+      form {
+
+        input {
+          font-size: 90%;
+        }
+
+        .submit {
+
+        }
+
+      }
+    }
+
+  }
+}
