@@ -65,7 +65,7 @@ function setBindings() {
 
         } else
         {
-            alert("You must fill out both input boxes");
+            alert("You must fill out both input boxes.");
         }
 
 
