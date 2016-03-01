@@ -31,7 +31,7 @@ function setBindings() {
 
     $(".exit").click(function(e) {
         var currentModal = this.parentElement.parentElement.className;
-        console.log($(e));
+        console.log(e);
         $(".modal").css("display", "none");
     });
 
@@ -50,43 +50,22 @@ function setBindings() {
         return false;
     });
 
-    $(".submit").click(function(e){
+    $(".submitSignIn").click(function(e){
         e.preventDefault();
+        validateInput();
+    });
 
-        var un = userName.value;
-        var ps = password.value;
-        var isEmailValid = validateEmail(un);
-
-        console.log(un);
-        console.log(ps);
-
-        if(ps != "" && un != "")
-        {
-
-        } else
-        {
-            alert("You must fill out both input boxes.");
-        }
-
-
-        if(isEmailValid != true)
-        {
-            $(".signUp").css("display", "none");
-            alert(isEmailValid);
-        } else
-        {
-            //TODO need to make a deferred on the service
-            Service.checkService(un);
-            alert(isEmailValid);
-        }
+    $(".submitSignUp").click(function(e){
+        e.preventDefault();
+        validateInput();
     });
 
     $(".login").click(function(){
-        $(".signUp").css("display", "block")
+        $(".signIn").css("display", "block")
     });
 
     $(".signUp").click(function(){
-        $(".signUpModal").css("dispaly", "block");
+        $(".register").css("display", "block");
     })
 
 }
@@ -94,6 +73,39 @@ function setBindings() {
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+}
+
+function validateInput() {
+
+    var un = $(".userName").val();
+    var ps = $(".password").val();
+    var isEmailValid = validateEmail(un);
+
+    console.log(un);
+    console.log(ps);
+
+    if(ps != "" && un != "")
+    {
+
+    } else
+    {
+        alert("You must fill out both input boxes.");
+    }
+
+
+    if(isEmailValid != true)
+    {
+        //$(".signUp").css("display", "none");
+        alert(isEmailValid);
+    } else
+    {
+        //TODO need to make a deferred on the service
+        Service.checkService(un);
+
+        Service.addUser().f_name = un;
+        Service.addUser().password = ps;
+        alert(isEmailValid);
+    }
 }
 
 $(document).ready(function(){

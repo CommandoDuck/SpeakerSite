@@ -40,6 +40,6 @@ var Service = (function(){
 
     return {
         checkService: _logInUser,
-        addUser: _addUser()
+        addUser: _addUser
     }
 })();
